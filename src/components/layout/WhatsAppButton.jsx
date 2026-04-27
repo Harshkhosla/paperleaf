@@ -2,6 +2,8 @@ import { MessageCircle } from "lucide-react";
 import { brand } from "../../config/brand.js";
 
 export default function WhatsAppButton() {
+  // Hide the WhatsApp button until a real number is configured.
+  if (!brand.whatsapp || /^9?1?0+$/.test(brand.whatsapp)) return null;
   const href = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(
     "Hello, I would like to enquire about your paper tableware.",
   )}`;

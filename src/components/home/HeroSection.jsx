@@ -13,15 +13,15 @@ export default function HeroSection() {
         <div>
           <p className="eyebrow mb-4">Eco-friendly tableware</p>
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.05]">
-            {brand.tagline}.
+            Premium paper cups, made for every pour.
           </h1>
           <p className="mt-5 max-w-xl text-ink-soft text-base md:text-lg leading-relaxed">
-            {brand.description} Food-safe, durable and ready-to-print solutions
-            engineered for hot and cold service.
+            From 100 ml cutting chai to 300 ml takeaway coffee — food-safe,
+            biodegradable cups crafted in Delhi and ready to print with your brand.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/products" className="btn-primary">
-              Explore Products <ArrowRight className="h-4 w-4" />
+              View All Sizes <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" className="btn-outline">
               Get a Custom Quote
@@ -30,7 +30,7 @@ export default function HeroSection() {
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
             <Stat icon={<Leaf className="h-5 w-5" />} value="100%" label="Biodegradable" />
             <Stat icon={<ShieldCheck className="h-5 w-5" />} value="FSSAI" label="Food-safe" />
-            <Stat icon={<Recycle className="h-5 w-5" />} value="11+" label="Categories" />
+            <Stat icon={<Recycle className="h-5 w-5" />} value="6" label="Cup sizes" />
           </div>
         </div>
         <div className="relative">

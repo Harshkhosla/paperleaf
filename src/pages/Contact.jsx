@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { FileText, Mail, MapPin } from "lucide-react";
 import EnquiryForm from "../components/forms/EnquiryForm.jsx";
 import { brand } from "../config/brand.js";
 import { useDocumentTitle } from "../hooks/useDocumentTitle.js";
@@ -29,31 +29,28 @@ export default function Contact() {
               body={brand.address}
             />
             <InfoCard
-              icon={<Phone className="h-5 w-5" />}
-              title="Call us"
-              body={
-                <a href={`tel:${brand.phoneRaw}`} className="hover:text-primary-700">
-                  {brand.phone}
-                </a>
-              }
-            />
-            <InfoCard
               icon={<Mail className="h-5 w-5" />}
               title="Email"
               body={
-                <>
-                  <a href={`mailto:${brand.email}`} className="block hover:text-primary-700">
-                    {brand.email}
-                  </a>
-                  <a
-                    href={`mailto:${brand.emailSecondary}`}
-                    className="block hover:text-primary-700"
-                  >
-                    {brand.emailSecondary}
-                  </a>
-                </>
+                <a href={`mailto:${brand.email}`} className="block hover:text-primary-700">
+                  {brand.email}
+                </a>
               }
             />
+            {brand.gstin && (
+              <InfoCard
+                icon={<FileText className="h-5 w-5" />}
+                title="GSTIN / State"
+                body={
+                  <>
+                    <span className="block font-mono">{brand.gstin}</span>
+                    <span className="block text-ink-mute mt-1">
+                      State: {brand.state}
+                    </span>
+                  </>
+                }
+              />
+            )}
             <div className="rounded-3xl overflow-hidden aspect-video bg-cream-100">
               <iframe
                 title="Map"

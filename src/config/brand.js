@@ -1,16 +1,18 @@
 // Centralized brand info — change here to rebrand the whole site.
 export const brand = {
-  name: "PaperLeaf",
+  name: "KD Engineers",
   tagline: "Bringing Your Brand to Eco Life",
   description:
     "Sustainable paper tableware crafted for modern food and FMCG brands — paper cups, bowls, tubs and more.",
-  email: "sales@paperleaf.example",
-  emailSecondary: "marketing@paperleaf.example",
-  phone: "+91 92170 12566",
-  phoneRaw: "919217012566",
-  whatsapp: "919217012566",
+  email: "Kdengineers95@gmail.com",
+  emailSecondary: "Kdengineers95@gmail.com",
+  phone: "+91 92106 20021",
+  phoneRaw: "919210620021",
+  whatsapp: "919210620021",
+  gstin: "07CMFPD6644E1Z8",
+  state: "Delhi, Code: 07",
   address:
-    "Plot No. 402-403, Sector 7, Phase-II, IMT Manesar, Gurgaon - 122052, Haryana, India",
+    "Plot No. 100, First Floor, Pocket-L, Sector-2, DSIIDC Bawana Industrial Area, New Delhi - 110039",
   socials: {
     facebook: "https://facebook.com",
     instagram: "https://instagram.com",

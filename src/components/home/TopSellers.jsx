@@ -8,10 +8,10 @@ export default function TopSellers() {
       <div className="container">
         <SectionHeader
           eyebrow="Best sellers"
-          title="Top Sellers Chosen By Premium Brands"
-          subtitle="Made from 100% biodegradable, food-safe materials. Trusted across cafes, cloud kitchens, FMCG brands and event organisers."
+          title="Cups Chosen By Premium Brands"
+          subtitle="Every size in our range is made from 100% biodegradable, food-safe board — trusted across cafes, cloud kitchens and event organisers."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProducts.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}

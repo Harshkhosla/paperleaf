@@ -7,7 +7,7 @@ import { categories } from "../../data/categories.js";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/products", label: "Products", hasMenu: true },
+  { to: "/products", label: "Paper Cups", hasMenu: true },
   { to: "/blog", label: "Blog" },
   { to: "/certificates", label: "Certificates" },
   { to: "/contact", label: "Contact" },
@@ -57,12 +57,12 @@ export default function Navbar() {
                   <ChevronDown className="h-4 w-4" />
                 </button>
                 {productsOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl bg-white shadow-card border border-cream-200 p-2 grid grid-cols-1 gap-0.5">
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 rounded-2xl bg-white shadow-card border border-cream-200 p-2 grid grid-cols-1 gap-0.5">
                     <Link
                       to="/products"
                       className="px-3 py-2 rounded-lg text-sm font-semibold text-primary-700 hover:bg-primary-50"
                     >
-                      All products →
+                      All sizes →
                     </Link>
                     <div className="h-px bg-cream-200 my-1" />
                     {categories.map((c) => (
@@ -71,7 +71,7 @@ export default function Navbar() {
                         to={`/products/${c.slug}`}
                         className="px-3 py-2 rounded-lg text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700"
                       >
-                        {c.label}
+                        Paper Cup — {c.label}
                       </Link>
                     ))}
                   </div>

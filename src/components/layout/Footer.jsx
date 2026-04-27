@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Leaf, Mail, MapPin, Phone } from "lucide-react";
+import { FileText, Leaf, Mail, MapPin } from "lucide-react";
 import { brand } from "../../config/brand.js";
 import { categories } from "../../data/categories.js";
 
@@ -81,12 +81,12 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white text-base font-semibold mb-4">Our Products</h4>
+          <h4 className="text-white text-base font-semibold mb-4">Paper Cup Sizes</h4>
           <ul className="space-y-2 text-sm">
-            {categories.slice(0, 7).map((c) => (
+            {categories.map((c) => (
               <li key={c.slug}>
                 <Link to={`/products/${c.slug}`} className="hover:text-white">
-                  {c.label}
+                  Paper Cup — {c.label}
                 </Link>
               </li>
             ))}
@@ -101,17 +101,20 @@ export default function Footer() {
               <span>{brand.address}</span>
             </li>
             <li className="flex gap-3 items-center">
-              <Phone className="h-4 w-4 shrink-0 text-primary-300" />
-              <a href={`tel:${brand.phoneRaw}`} className="hover:text-white">
-                {brand.phone}
-              </a>
-            </li>
-            <li className="flex gap-3 items-center">
               <Mail className="h-4 w-4 shrink-0 text-primary-300" />
               <a href={`mailto:${brand.email}`} className="hover:text-white">
                 {brand.email}
               </a>
             </li>
+            {brand.gstin && (
+              <li className="flex gap-3 items-start">
+                <FileText className="h-4 w-4 mt-0.5 shrink-0 text-primary-300" />
+                <span>
+                  <span className="block">GSTIN: {brand.gstin}</span>
+                  <span className="block text-cream-100/70">State: {brand.state}</span>
+                </span>
+              </li>
+            )}
           </ul>
         </div>
       </div>

@@ -47,19 +47,12 @@ export default function ProductCategory() {
             <h2 className="text-2xl md:text-3xl font-bold">About {product.name}</h2>
             <p className="mt-4 text-ink-soft leading-relaxed">{product.description}</p>
 
-            {product.sizes && (
+            {product.size && (
               <div className="mt-6">
-                <p className="eyebrow mb-3">Available sizes</p>
-                <div className="flex flex-wrap gap-2">
-                  {product.sizes.map((s) => (
-                    <span
-                      key={s}
-                      className="rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-700"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
+                <p className="eyebrow mb-3">Size</p>
+                <span className="rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-700">
+                  {product.size}
+                </span>
               </div>
             )}
 

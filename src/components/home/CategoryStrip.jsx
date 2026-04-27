@@ -7,9 +7,9 @@ export default function CategoryStrip() {
     <section className="section bg-white">
       <div className="container">
         <SectionHeader
-          eyebrow="Our range"
-          title="Explore Our Tableware Range"
-          subtitle="From everyday tea glasses to premium double-wall cups, our sustainable tableware combines environmental responsibility with exceptional quality and performance."
+          eyebrow="Our sizes"
+          title="Explore Our Paper Cup Range"
+          subtitle="Six trusted sizes for tea, coffee, juice and cold drinks — all food-safe, biodegradable and ready to print with your brand."
         />
         <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x">
           {products.map((p) => (
@@ -28,7 +28,7 @@ export default function CategoryStrip() {
               </div>
               <div className="p-4">
                 <p className="text-xs text-primary-600 font-semibold uppercase tracking-wide">
-                  {p.sizes?.[0]}
+                  {p.size}
                 </p>
                 <h3 className="text-base font-semibold mt-1">{p.name}</h3>
               </div>

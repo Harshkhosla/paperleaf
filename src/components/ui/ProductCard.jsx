@@ -4,7 +4,10 @@ import { ArrowRight } from "lucide-react";
 export default function ProductCard({ product }) {
   return (
     <article className="card group flex flex-col">
-      <Link to={`/products/${product.slug}`} className="block aspect-[4/3] overflow-hidden bg-cream-100">
+      <Link
+        to={`/products/${product.slug}`}
+        className="relative block aspect-[4/3] overflow-hidden bg-leaf-gradient"
+      >
         <img
           src={product.image}
           alt={product.name}
@@ -14,6 +17,11 @@ export default function ProductCard({ product }) {
             e.currentTarget.style.display = "none";
           }}
         />
+        {product.size && (
+          <span className="absolute top-3 left-3 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-semibold text-primary-700 shadow-card">
+            {product.size}
+          </span>
+        )}
       </Link>
       <div className="p-5 flex flex-col flex-1">
         <h3 className="font-display text-lg font-semibold">
@@ -22,13 +30,6 @@ export default function ProductCard({ product }) {
           </Link>
         </h3>
         <p className="mt-1 text-sm text-ink-mute">{product.short}</p>
-        {product.sizes && (
-          <p className="mt-3 text-xs text-ink-mute">
-            <span className="font-medium text-ink-soft">Sizes:</span>{" "}
-            {product.sizes.slice(0, 3).join(" · ")}
-            {product.sizes.length > 3 ? "…" : ""}
-          </p>
-        )}
         <div className="mt-5 pt-4 border-t border-cream-200 flex items-center justify-between">
           <Link
             to={`/contact?product=${product.slug}`}

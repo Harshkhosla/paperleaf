@@ -1,15 +1,9 @@
-// Lightweight category list used by the home strip and footer.
-// Keep in sync with products.js slugs.
+// Paper cup sizes — keep slugs in sync with products.js.
 export const categories = [
-  { slug: "paper-bowls", label: "Paper Bowls" },
-  { slug: "paper-tubs", label: "Paper Tubs" },
-  { slug: "paper-cups", label: "Paper Cups" },
-  { slug: "noodle-box", label: "Noodle Box" },
-  { slug: "paper-glass-single-wall", label: "Single Wall Glass" },
-  { slug: "psb-box", label: "PSB Box" },
-  { slug: "paper-window-tubs", label: "Window Tubs" },
-  { slug: "double-wall-paper-glass", label: "Double Wall Glass" },
-  { slug: "kraft-food-tray", label: "Kraft Food Tray" },
-  { slug: "salad-bowls", label: "Salad Bowls" },
-  { slug: "psb-tray", label: "PSB Tray" },
+  { slug: "paper-cup-100ml", label: "100 ml" },
+  { slug: "paper-cup-130ml", label: "130 ml" },
+  { slug: "paper-cup-150ml", label: "150 ml" },
+  { slug: "paper-cup-200ml", label: "200 ml" },
+  { slug: "paper-cup-250ml", label: "250 ml" },
+  { slug: "paper-cup-300ml", label: "300 ml" },
 ];
