@@ -1,22 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import PaperCupArt from "./PaperCupArt.jsx";
 
 export default function ProductCard({ product }) {
   return (
     <article className="card group flex flex-col">
       <Link
         to={`/products/${product.slug}`}
-        className="relative block aspect-[4/3] overflow-hidden bg-leaf-gradient"
+        className="relative block aspect-[4/3] overflow-hidden"
       >
-        <img
-          src={product.image}
-          alt={product.name}
-          loading="lazy"
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
+        <div className="absolute inset-0 transition duration-500 group-hover:scale-105">
+          <PaperCupArt sizeMl={product.sizeMl} label={product.size} />
+        </div>
         {product.size && (
           <span className="absolute top-3 left-3 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-semibold text-primary-700 shadow-card">
             {product.size}

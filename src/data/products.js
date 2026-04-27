@@ -1,13 +1,12 @@
-// Catalog: paper cups in six sizes.
-// Images use Unsplash with stable photo IDs.
+// Catalog: paper cups in six sizes. Each cup is rendered as a vector
+// illustration scaled to its volume — see components/ui/PaperCupArt.jsx.
 export const products = [
   {
     slug: "paper-cup-100ml",
     name: "Paper Cup — 100 ml",
     size: "100 ml",
+    sizeMl: 100,
     short: "Cutting chai & espresso shots.",
-    image:
-      "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=900&q=70",
     description:
       "Perfectly sized for a quick cutting chai or a strong espresso shot. Compact, lightweight and food-safe — ideal for tea stalls, offices and events.",
     features: [
@@ -22,9 +21,8 @@ export const products = [
     slug: "paper-cup-130ml",
     name: "Paper Cup — 130 ml",
     size: "130 ml",
+    sizeMl: 130,
     short: "Standard tea & water cup.",
-    image:
-      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=70",
     description:
       "The everyday tea and water cup used at offices, weddings and dispensers. Sturdy walls and crisp print surface.",
     features: [
@@ -39,9 +37,8 @@ export const products = [
     slug: "paper-cup-150ml",
     name: "Paper Cup — 150 ml",
     size: "150 ml",
+    sizeMl: 150,
     short: "Filter coffee & masala chai.",
-    image:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=70",
     description:
       "Built for filter coffee and masala chai. The 150 ml size hits the sweet spot between portion size and cost-per-cup.",
     features: [
@@ -56,9 +53,8 @@ export const products = [
     slug: "paper-cup-200ml",
     name: "Paper Cup — 200 ml",
     size: "200 ml",
+    sizeMl: 200,
     short: "Coffee, juice & cold drinks.",
-    image:
-      "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=900&q=70",
     description:
       "A versatile 200 ml cup for hot coffee, fresh juices and chilled beverages. Comfortable hand feel with a confident rim.",
     features: [
@@ -73,9 +69,8 @@ export const products = [
     slug: "paper-cup-250ml",
     name: "Paper Cup — 250 ml",
     size: "250 ml",
+    sizeMl: 250,
     short: "Takeaway lattes & lassi.",
-    image:
-      "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=900&q=70",
     description:
       "The most-loved takeaway size. Holds a generous latte, lassi or buttermilk without sloshing.",
     features: [
@@ -90,9 +85,8 @@ export const products = [
     slug: "paper-cup-300ml",
     name: "Paper Cup — 300 ml",
     size: "300 ml",
+    sizeMl: 300,
     short: "Large coffee & smoothies.",
-    image:
-      "https://images.unsplash.com/photo-1517663154410-d77f8d3f9d1e?auto=format&fit=crop&w=900&q=70",
     description:
       "The largest in our range — perfect for full-size coffees, smoothies and milkshakes. Strong sidewall keeps the cup rigid all the way down.",
     features: [

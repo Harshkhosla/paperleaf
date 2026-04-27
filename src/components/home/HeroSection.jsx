@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf, Recycle, ShieldCheck } from "lucide-react";
 import { brand } from "../../config/brand.js";
+import PaperCupArt from "../ui/PaperCupArt.jsx";
 
 export default function HeroSection() {
   return (
@@ -35,11 +36,7 @@ export default function HeroSection() {
         </div>
         <div className="relative">
           <div className="aspect-[4/5] md:aspect-[5/6] rounded-3xl overflow-hidden shadow-card">
-            <img
-              src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=80"
-              alt="Sustainable paper cups"
-              className="h-full w-full object-cover"
-            />
+            <PaperCupArt sizeMl={250} label="250 ML" />
           </div>
           <div className="hidden md:flex absolute -left-8 bottom-8 bg-white rounded-2xl shadow-card p-4 gap-3 items-center max-w-xs">
             <div className="grid h-12 w-12 place-items-center rounded-full bg-primary-100 text-primary-700">
