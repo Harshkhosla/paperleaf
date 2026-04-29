@@ -1,16 +1,15 @@
+import cupRangeWide from "../assets/samolk0.jpeg";
+import cupPyramid from "../assets/sms.jpeg";
+import fruitCupCloseup from "../assets/sss.jpeg";
+import printedCupSet from "../assets/WhatsApp Image 2026-04-29 at 22.16.55.jpeg";
+import fruitCupSet from "../assets/WhatsApp Image 2026-04-29 at 22.16.56.jpeg";
+
 const cupPhotos = {
-  woodenTray:
-    "https://images.pexels.com/photos/8858941/pexels-photo-8858941.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  cafeStack:
-    "https://images.pexels.com/photos/10214353/pexels-photo-10214353.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  coffeePair:
-    "https://images.pexels.com/photos/20282353/pexels-photo-20282353.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  topView:
-    "https://images.pexels.com/photos/7319334/pexels-photo-7319334.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  minimalistPair:
-    "https://images.pexels.com/photos/6312134/pexels-photo-6312134.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  warmCafe:
-    "https://images.pexels.com/photos/17926902/pexels-photo-17926902.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  cupRangeWide,
+  cupPyramid,
+  fruitCupCloseup,
+  printedCupSet,
+  fruitCupSet,
 };
 
 // Catalog: paper cups in six sizes.
@@ -30,8 +29,8 @@ export const products = [
       "Custom printing in 1–4 colors",
     ],
     image: {
-      src: cupPhotos.cafeStack,
-      alt: "Stacked paper cups in a warm cafe setting",
+      src: cupPhotos.printedCupSet,
+      alt: "Printed and plain paper cup stacks on a white background",
       position: "center",
     },
     featured: true,
@@ -51,8 +50,8 @@ export const products = [
       "Custom branding available",
     ],
     image: {
-      src: cupPhotos.minimalistPair,
-      alt: "Paper cups arranged on a wooden tray",
+      src: cupPhotos.fruitCupSet,
+      alt: "Printed fruit paper cups arranged in a product display",
       position: "center",
     },
     featured: true,
@@ -72,8 +71,8 @@ export const products = [
       "Perfect for cafes & tea brands",
     ],
     image: {
-      src: cupPhotos.coffeePair,
-      alt: "Fresh coffee served in paper cups",
+      src: cupPhotos.cupRangeWide,
+      alt: "Wide display of paper cups in multiple sizes and prints",
       position: "center",
     },
     featured: true,
@@ -93,8 +92,8 @@ export const products = [
       "Ideal for QSR & cloud kitchens",
     ],
     image: {
-      src: cupPhotos.topView,
-      alt: "Takeaway paper cups with wooden stirrers on a tray",
+      src: cupPhotos.fruitCupCloseup,
+      alt: "Close-up of printed paper cups on a tabletop",
       position: "center",
     },
     featured: true,
@@ -114,8 +113,8 @@ export const products = [
       "Stackable for transport",
     ],
     image: {
-      src: cupPhotos.warmCafe,
-      alt: "Paper cup stack ready for takeaway service",
+      src: cupPhotos.cupPyramid,
+      alt: "Pyramid display of colorful printed paper cups",
       position: "center",
     },
     featured: true,
@@ -135,8 +134,8 @@ export const products = [
       "Great print real estate",
     ],
     image: {
-      src: cupPhotos.coffeePair,
-      alt: "Paper cups filled with frothy coffee",
+      src: cupPhotos.cupRangeWide,
+      alt: "Full paper cup range with different sizes and printed designs",
       position: "center",
     },
     featured: true,

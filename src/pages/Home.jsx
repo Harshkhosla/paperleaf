@@ -4,7 +4,6 @@ import TopSellers from "../components/home/TopSellers.jsx";
 import AboutTeaser from "../components/home/AboutTeaser.jsx";
 import PaperVsPlastic from "../components/home/PaperVsPlastic.jsx";
 import SustainabilityCTA from "../components/home/SustainabilityCTA.jsx";
-import InnovationAndTestimonials from "../components/home/InnovationAndTestimonials.jsx";
 import { useDocumentTitle } from "../hooks/useDocumentTitle.js";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <AboutTeaser />
       <PaperVsPlastic />
       <SustainabilityCTA />
-      {/* <InnovationAndTestimonials /> */}
       {/* <BlogsGrid /> */}
     </>
   );
