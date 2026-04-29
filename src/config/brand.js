@@ -9,6 +9,7 @@ export const brand = {
   phone: "+91 92106 20021",
   phoneRaw: "919210620021",
   whatsapp: "919210620021",
+  whatsappMessage: "Hello, I would like to enquire about your paper tableware.",
   gstin: "07CMFPD6644E1Z8",
   state: "Delhi, Code: 07",
   address:
