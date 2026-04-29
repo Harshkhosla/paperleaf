@@ -1,5 +1,19 @@
-// Catalog: paper cups in six sizes. Each cup is rendered as a vector
-// illustration scaled to its volume — see components/ui/PaperCupArt.jsx.
+const cupPhotos = {
+  woodenTray:
+    "https://images.pexels.com/photos/8858941/pexels-photo-8858941.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  cafeStack:
+    "https://images.pexels.com/photos/10214353/pexels-photo-10214353.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  coffeePair:
+    "https://images.pexels.com/photos/20282353/pexels-photo-20282353.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  topView:
+    "https://images.pexels.com/photos/7319334/pexels-photo-7319334.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  minimalistPair:
+    "https://images.pexels.com/photos/6312134/pexels-photo-6312134.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  warmCafe:
+    "https://images.pexels.com/photos/17926902/pexels-photo-17926902.jpeg?auto=compress&cs=tinysrgb&w=1400",
+};
+
+// Catalog: paper cups in six sizes.
 export const products = [
   {
     slug: "paper-cup-100ml",
@@ -15,6 +29,11 @@ export const products = [
       "Smooth rolled rim for safe sipping",
       "Custom printing in 1–4 colors",
     ],
+    image: {
+      src: cupPhotos.cafeStack,
+      alt: "Stacked paper cups in a warm cafe setting",
+      position: "center",
+    },
     featured: true,
   },
   {
@@ -31,6 +50,11 @@ export const products = [
       "Bulk-pack ready",
       "Custom branding available",
     ],
+    image: {
+      src: cupPhotos.minimalistPair,
+      alt: "Paper cups arranged on a wooden tray",
+      position: "center",
+    },
     featured: true,
   },
   {
@@ -47,6 +71,11 @@ export const products = [
       "Greaseproof inner liner",
       "Perfect for cafes & tea brands",
     ],
+    image: {
+      src: cupPhotos.coffeePair,
+      alt: "Fresh coffee served in paper cups",
+      position: "center",
+    },
     featured: true,
   },
   {
@@ -63,6 +92,11 @@ export const products = [
       "Print-friendly matte surface",
       "Ideal for QSR & cloud kitchens",
     ],
+    image: {
+      src: cupPhotos.topView,
+      alt: "Takeaway paper cups with wooden stirrers on a tray",
+      position: "center",
+    },
     featured: true,
   },
   {
@@ -79,6 +113,11 @@ export const products = [
       "Premium print surface",
       "Stackable for transport",
     ],
+    image: {
+      src: cupPhotos.warmCafe,
+      alt: "Paper cup stack ready for takeaway service",
+      position: "center",
+    },
     featured: true,
   },
   {
@@ -95,6 +134,11 @@ export const products = [
       "Stable base, no flex",
       "Great print real estate",
     ],
+    image: {
+      src: cupPhotos.coffeePair,
+      alt: "Paper cups filled with frothy coffee",
+      position: "center",
+    },
     featured: true,
   },
 ];

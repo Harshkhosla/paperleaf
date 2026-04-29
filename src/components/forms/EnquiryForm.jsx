@@ -33,7 +33,6 @@ export default function EnquiryForm() {
 
   const onSubmit = async (data) => {
     await new Promise((r) => setTimeout(r, 800));
-    // eslint-disable-next-line no-console
     console.info("Enquiry submitted:", data);
     toast.success("Thanks! Our team will reach out within 24 hours.");
     reset({

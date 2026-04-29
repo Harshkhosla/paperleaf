@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import { getProduct, products } from "../data/products.js";
 import ProductCard from "../components/ui/ProductCard.jsx";
-import PaperCupArt from "../components/ui/PaperCupArt.jsx";
+import ProductPhoto from "../components/ui/ProductPhoto.jsx";
 import { useDocumentTitle } from "../hooks/useDocumentTitle.js";
 
 export default function ProductCategory() {
@@ -37,7 +37,7 @@ export default function ProductCategory() {
       <section className="section bg-white">
         <div className="container grid gap-12 lg:grid-cols-2 lg:items-start">
           <div className="aspect-square rounded-3xl overflow-hidden shadow-card">
-            <PaperCupArt sizeMl={product.sizeMl} label={product.size} />
+            <ProductPhoto product={product} showCupBadge />
           </div>
 
           <div>

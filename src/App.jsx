@@ -4,7 +4,6 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import ProductCategory from "./pages/ProductCategory.jsx";
-import Blog from "./pages/Blog.jsx";
 import BlogPost from "./pages/BlogPost.jsx";
 import Contact from "./pages/Contact.jsx";
 import Certificates from "./pages/Certificates.jsx";
@@ -20,7 +19,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:slug" element={<ProductCategory />} />
-        <Route path="blog" element={<Blog />} />
+        {/* <Route path="blog" element={<Blog />} /> */}
         <Route path="blog/:slug" element={<BlogPost />} />
         <Route path="contact" element={<Contact />} />
         <Route path="certificates" element={<Certificates />} />

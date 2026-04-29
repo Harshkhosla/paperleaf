@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Leaf, Menu, X } from "lucide-react";
 import { brand } from "../../config/brand.js";
 import { categories } from "../../data/categories.js";
@@ -17,12 +17,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const productsRef = useRef(null);
-  const location = useLocation();
 
-  useEffect(() => {
+  const closeMenus = () => {
     setOpen(false);
     setProductsOpen(false);
-  }, [location.pathname]);
+  };
 
   useEffect(() => {
     const onClick = (e) => {
@@ -37,7 +36,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-cream-200">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl text-primary-700">
+        <Link
+          to="/"
+          onClick={closeMenus}
+          className="flex items-center gap-2 font-display text-xl text-primary-700"
+        >
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary-600 text-white">
             <Leaf className="h-5 w-5" />
           </span>
@@ -60,6 +63,7 @@ export default function Navbar() {
                   <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 rounded-2xl bg-white shadow-card border border-cream-200 p-2 grid grid-cols-1 gap-0.5">
                     <Link
                       to="/products"
+                      onClick={closeMenus}
                       className="px-3 py-2 rounded-lg text-sm font-semibold text-primary-700 hover:bg-primary-50"
                     >
                       All sizes →
@@ -69,6 +73,7 @@ export default function Navbar() {
                       <Link
                         key={c.slug}
                         to={`/products/${c.slug}`}
+                        onClick={closeMenus}
                         className="px-3 py-2 rounded-lg text-sm text-ink-soft hover:bg-primary-50 hover:text-primary-700"
                       >
                         Paper Cup — {c.label}
@@ -82,6 +87,7 @@ export default function Navbar() {
                 key={l.to}
                 to={l.to}
                 end={l.to === "/"}
+                onClick={closeMenus}
                 className={({ isActive }) =>
                   `px-4 py-2 rounded-full text-sm font-medium transition ${
                     isActive
@@ -97,7 +103,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link to="/contact" className="btn-primary">
+          <Link to="/contact" onClick={closeMenus} className="btn-primary">
             Contact Us
           </Link>
         </div>
@@ -120,6 +126,7 @@ export default function Navbar() {
                 key={l.to}
                 to={l.to}
                 end={l.to === "/"}
+                onClick={closeMenus}
                 className={({ isActive }) =>
                   `px-4 py-3 rounded-lg text-sm font-medium ${
                     isActive
@@ -131,7 +138,7 @@ export default function Navbar() {
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/contact" className="btn-primary mt-2 self-start">
+            <Link to="/contact" onClick={closeMenus} className="btn-primary mt-2 self-start">
               Contact Us
             </Link>
           </div>

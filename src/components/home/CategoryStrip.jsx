@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SectionHeader from "../ui/SectionHeader.jsx";
-import PaperCupArt from "../ui/PaperCupArt.jsx";
+import ProductPhoto from "../ui/ProductPhoto.jsx";
 import { products } from "../../data/products.js";
 
 export default function CategoryStrip() {
@@ -19,8 +19,13 @@ export default function CategoryStrip() {
               to={`/products/${p.slug}`}
               className="snap-start min-w-[220px] max-w-[220px] card group"
             >
-              <div className="aspect-square overflow-hidden">
-                <PaperCupArt sizeMl={p.sizeMl} label={p.size} className="transition duration-500 group-hover:scale-105" />
+              <div className="relative aspect-square overflow-hidden">
+                <div className="absolute inset-0 transition duration-500 group-hover:scale-105">
+                  <ProductPhoto product={p} />
+                </div>
+                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-primary-700 shadow-card backdrop-blur">
+                  {p.size}
+                </span>
               </div>
               <div className="p-4">
                 <p className="text-xs text-primary-600 font-semibold uppercase tracking-wide">

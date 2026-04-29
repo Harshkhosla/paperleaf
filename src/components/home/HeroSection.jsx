@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf, Recycle, ShieldCheck } from "lucide-react";
-import { brand } from "../../config/brand.js";
-import PaperCupArt from "../ui/PaperCupArt.jsx";
+import { getProduct } from "../../data/products.js";
+import ProductPhoto from "../ui/ProductPhoto.jsx";
+
+const heroProduct = getProduct("paper-cup-250ml");
 
 export default function HeroSection() {
   return (
@@ -36,7 +38,7 @@ export default function HeroSection() {
         </div>
         <div className="relative">
           <div className="aspect-[4/5] md:aspect-[5/6] rounded-3xl overflow-hidden shadow-card">
-            <PaperCupArt sizeMl={250} label="250 ML" />
+            <ProductPhoto product={heroProduct} showCupBadge imageClassName="scale-105" />
           </div>
           <div className="hidden md:flex absolute -left-8 bottom-8 bg-white rounded-2xl shadow-card p-4 gap-3 items-center max-w-xs">
             <div className="grid h-12 w-12 place-items-center rounded-full bg-primary-100 text-primary-700">
